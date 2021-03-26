@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: true 
+  tasks:
+
+  - name: Remove Ruby
+    dnf:
+      name: ruby
+      state: absent
