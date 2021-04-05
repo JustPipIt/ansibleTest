@@ -8,4 +8,10 @@
     dnf:
       name: httpd
       state: latest
+      when: ansible_distribution == "Fedora"
 
+  - name: install apache package
+    apt:
+      name: httpd
+      state: latest
+      when: ansible_distribution == "Ubuntu"
